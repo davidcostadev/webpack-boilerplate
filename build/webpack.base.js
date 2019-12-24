@@ -1,11 +1,12 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const resolve = require('./utils/resolve');
+// const cssLoader = require('./rules/cssLoader');
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './public/index.html',
   filename: 'index.html',
   inject: 'body',
-  chunksSortMode: 'dependency',
+  chunksSortMode: 'dependency'
 });
 
 module.exports = {
@@ -24,10 +25,9 @@ module.exports = {
           loader: 'babel-loader'
         }
       }
-    ],
+      // ,cssLoader
+    ]
   },
-  plugins: [
-    HtmlWebpackPluginConfig,
-  ],
-  devtool: 'source-map',
+  plugins: [HtmlWebpackPluginConfig],
+  devtool: 'source-map'
 };

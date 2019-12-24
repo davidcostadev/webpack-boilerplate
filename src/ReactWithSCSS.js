@@ -3,10 +3,6 @@ import ReactDOM from 'react-dom';
 
 import './ReactWithSCSS.scss';
 
-const App = () => (
-  <div className="App">
-    This is App
-  </div>
-);
+const App = () => <div className='App'>This is App</div>;
 
-ReactDOM.render(<App />, document.getElementById('#root'));
+ReactDOM.render(<App />, document.getElementById('root'));
