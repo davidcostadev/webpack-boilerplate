@@ -33,3 +33,24 @@ package dev `style-loader css-loader`
 
 _build/webpack.base.js_
 Remove comment of _cssLoader_
+
+## With StyledComponents
+
+package `styled-components`
+
+package dev `babel-plugin-styled-components`
+
+_.babelrc_
+
+```json
+{
+  "plugins": [
+    [
+      "babel-plugin-styled-components",
+      {
+        "displayName": false
+      }
+    ]
+  ]
+}
+```
